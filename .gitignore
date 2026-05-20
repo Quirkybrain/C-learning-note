@@ -1,0 +1,32 @@
+# C/C++ build artifacts
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.out
+*.exe
+*.d
+
+# Example binaries
+main
+*/main
+
+# Debug / crash byproducts
+*.dSYM/
+core
+vgcore.*
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Codex / local agent files
+.codex/
+.agents/
+*.codex.log
+*.codex.tmp
