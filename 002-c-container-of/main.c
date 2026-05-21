@@ -13,4 +13,6 @@ int main(void) {
 
         deleteCat(cat);
         deleteDog(dog);
+
+        return 0;
 }
