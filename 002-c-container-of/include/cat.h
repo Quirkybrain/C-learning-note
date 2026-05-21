@@ -5,8 +5,8 @@
  * @version 0.1
  * @date 2026-05-20
  */
-#ifndef _CAT_H
-#define _CAT_H
+#ifndef CAT_H_
+#define CAT_H_
 
 
 #include "animal.h"

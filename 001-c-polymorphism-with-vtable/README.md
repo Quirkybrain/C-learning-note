@@ -72,8 +72,8 @@ catDrink / dogDrink
  * @version 0.1
  * @date 2026-05-20
  */
-#ifndef _ANIMAL_H
-#define _ANIMAL_H
+#ifndef ANIMAL_H_
+#define ANIMAL_H_
 
 
 /** @brief 动物名称可用的最大字节数，包含结尾的 '\0'。 */
@@ -186,8 +186,8 @@ self->vtblptr->speak(self);
  * @version 0.1
  * @date 2026-05-20
  */
-#ifndef _CAT_H
-#define _CAT_H
+#ifndef CAT_H_
+#define CAT_H_
 
 
 #include "animal.h"
@@ -392,8 +392,8 @@ cat->base.vtblptr = &catVtbl;
  * @version 0.1
  * @date 2026-05-20
  */
-#ifndef _DOG_H
-#define _DOG_H
+#ifndef DOG_H_
+#define DOG_H_
 
 
 #include "animal.h"

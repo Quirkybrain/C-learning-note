@@ -5,8 +5,8 @@
  * @version 0.1
  * @date 2026-05-20
  */
-#ifndef _ANIMAL_H
-#define _ANIMAL_H
+#ifndef ANIMAL_H_
+#define ANIMAL_H_
 
 
 /** @brief 动物名称可用的最大字节数，包含结尾的 '\0'。 */
