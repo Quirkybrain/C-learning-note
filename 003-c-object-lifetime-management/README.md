@@ -128,6 +128,7 @@ void (*destroy)(Animal* self);
 如果统一销毁入口也只接收 `Animal*`，调用方很可能会写成：
 
 ```c
+// 错误示例
 Animal* animal = catAsAnimal(cat);
 destroyAnimal(animal);
 ```

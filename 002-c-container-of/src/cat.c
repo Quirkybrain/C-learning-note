@@ -23,8 +23,8 @@
  * 所以 Makefile 里显式使用了 gnu11 模式。
  */
 #define container_of(ptr, type, member) ({                  \
-    const typeof( ((type*)0)->member )* __mptr = (ptr);    \
-    (type*)( (char*)__mptr - my_offsetof(type, member) ); \
+        const typeof( ((type*)0)->member )* __mptr = (ptr);    \
+        (type*)( (char*)__mptr - my_offsetof(type, member) ); \
 })
 
 

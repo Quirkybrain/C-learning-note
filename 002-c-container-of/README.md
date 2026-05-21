@@ -1,5 +1,8 @@
 # 从首成员基类到 container_of：C 语言里的封装抽象再进一步
 
+- 作者：Quirkybrain
+- GitHub 仓库：[Quirkybrain/C-learning-note](https://github.com/Quirkybrain/C-learning-note)
+
 001-c-polymorphism-with-vtable 的示例已经展示了 C 语言如何通过结构体和函数指针表模拟封装、抽象与多态。这一次对于 `cat.c` 做了一个很关键的修改：`Animal base` 不再是 `struct Cat` 的第一个成员，而是放在了 `lives` 后面。
 
 这个变化看起来很小，但它让示例从“刚好能工作”推进到了更接近真实工程里的写法。因为对象转换不再依赖“基类字段必须放在结构体第一个位置”这个隐含约定，而是通过宏根据成员地址反推出外层对象地址。
@@ -214,7 +217,6 @@ Linux kernel 里大量使用类似 `container_of` 的技巧。典型场景是：
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stddef.h>
 #include "cat.h"
 
 
@@ -237,8 +239,8 @@ Linux kernel 里大量使用类似 `container_of` 的技巧。典型场景是：
  * 所以 Makefile 里显式使用了 gnu11 模式。
  */
 #define container_of(ptr, type, member) ({                  \
-    const typeof( ((type*)0)->member )* __mptr = (ptr);    \
-    (type*)( (char*)__mptr - my_offsetof(type, member) ); \
+        const typeof( ((type*)0)->member )* __mptr = (ptr);    \
+        (type*)( (char*)__mptr - my_offsetof(type, member) ); \
 })
 
 
@@ -349,3 +351,7 @@ Animal* catAsAnimal(Cat* cat) {
 ## 小结
 
 这章提到的内容也是 C 语言很有意思的地方。它没有内建的类系统，但它足够贴近内存模型。只要我们理解地址、偏移量、函数指针和结构体布局，就可以在很薄的一层机制上搭出可读、可维护的抽象。
+
+更重要的是，到这里为止，我们已经拿到了一个后续非常关键的能力：当抽象层只给我们一个 `Animal*` 时，具体类型依然可以把它恢复成完整对象地址。
+
+这为下一章铺平了路。既然现在已经能安全找回真正的 `Cat*` / `Dog*`，下一章就可以继续把“析构函数”也加入函数表，让对象的释放不再由调用端分别写 `deleteCat()`、`deleteDog()`，而是也像 `speak` / `drink` 一样走统一的抽象接口。
