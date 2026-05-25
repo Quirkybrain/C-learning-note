@@ -19,3 +19,9 @@
 这个仓库以学习记录为主，因此部分示例会刻意保留“教学型写法”，用于展示某种机制为什么能工作、以及为什么某些写法会出问题。
 
 会持续补充更多和 C 语言相关的主题。
+
+## License
+
+Unless otherwise noted, the original learning notes, example code, and repository-specific modifications in this project are licensed under the MIT License.
+
+Third-party source code preserved for study purposes retains its original upstream copyright and license terms.
