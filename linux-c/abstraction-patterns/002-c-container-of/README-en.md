@@ -3,6 +3,14 @@
 - Author: Quirkybrain
 - GitHub Repository: [Quirkybrain/C-learning-note](https://github.com/Quirkybrain/C-learning-note)
 
+> [!NOTE]
+> ### 📝 Authorship & AI Assistance Statement
+> 
+> In commitment to open and transparent technical documentation, please note:
+> 1. **Core Authorship**: All example code implementations, curriculum progression frameworks, and chapter architectural concepts in this repository were conceived and designed by Quirkybrain.
+> 2. **AI Assistance**: The explanatory documentation for each chapter was expanded and polished by AI based strictly on the author's original outlines, core ideas, and derivation notes; code comments have also been refined and supplemented with AI assistance for better readability.
+> 3. **Manual Verification**: All AI-polished articles and enhanced comments have been thoroughly inspected and verified by Quirkybrain to ensure full alignment with the core curriculum content, technical accuracy, and pedagogical intent.
+
 The example in `001-c-polymorphism-with-vtable` already showed how C can simulate encapsulation, abstraction, and polymorphism through structures and function-pointer tables. This time, I made one important change to `cat.c`: `Animal base` is no longer the first member of `struct Cat`. Instead, it is placed after `lives`.
 
 This change looks small, but it pushes the example from “it happens to work” toward a style that is closer to real-world low-level engineering. Object conversion no longer depends on the hidden assumption that “the base-class field must be the first member of the structure.” Instead, we use a macro to recover the outer object address from the address of one of its members.

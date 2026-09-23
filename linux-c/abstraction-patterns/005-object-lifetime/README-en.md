@@ -3,6 +3,14 @@
 - Author: Quirkybrain
 - GitHub repository: [Quirkybrain/C-learning-note](https://github.com/Quirkybrain/C-learning-note)
 
+> [!NOTE]
+> ### 📝 Authorship & AI Assistance Statement
+> 
+> In commitment to open and transparent technical documentation, please note:
+> 1. **Core Authorship**: All example code implementations, curriculum progression frameworks, and chapter architectural concepts in this repository were conceived and designed by Quirkybrain.
+> 2. **AI Assistance**: The explanatory documentation for each chapter was expanded and polished by AI based strictly on the author's original outlines, core ideas, and derivation notes; code comments have also been refined and supplemented with AI assistance for better readability.
+> 3. **Manual Verification**: All AI-polished articles and enhanced comments have been thoroughly inspected and verified by Quirkybrain to ensure full alignment with the core curriculum content, technical accuracy, and pedagogical intent.
+
 Over the previous chapters, I gradually built a simple object model in C: function tables organize common behavior, `container_of()` recovers the complete object, and `cleanUp -> release` cleans up member resources before releasing the object itself.
 
 004 explained how an object should be destroyed, but the caller used `destroyAnimal()`:

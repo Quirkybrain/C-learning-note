@@ -3,6 +3,14 @@
 - 作者：Quirkybrain
 - GitHub 仓库：[Quirkybrain/C-learning-note](https://github.com/Quirkybrain/C-learning-note)
 
+> [!NOTE]
+> ### 📝 原创与 AI 辅助说明
+> 
+> 本项目坚持开放、透明的技术记录原则，特此说明：
+> 1. **核心原创**：仓库中所有示例代码、课程步骤演进体系以及各章节的剖析思路，均由作者Quirkybrain设计完成。
+> 2. **AI 辅助范围**：各章节的配套说明文档是基于作者提供的核心思路、提纲与推导脉络，由 AI 进行语言润色与细节扩写；源码中的部分注释亦在 AI 辅助下进行了补充与可读性改良。
+> 3. **人工核验**：所有经由 AI 润色的说明文章与改良注释，均由作者Quirkybrain进行了检查与技术校对，确认完全符合本系列课程的核心内容与教学设计思想。
+
 `001-c-polymorphism-with-vtable` 用 `AnimalVtbl` 把 `speak` 和 `drink` 做成了统一接口，说明 C 里也可以用结构体和函数指针模拟“抽象 + 多态”。
 
 `002-c-container-of` 又补上了一个更底层但很关键的能力：当 `Animal base` 不再位于具体结构体第一个成员时，如何从 `Animal*` 安全地找回真正的 `Cat*` 或 `Dog*`。
